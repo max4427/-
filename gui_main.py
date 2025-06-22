@@ -132,7 +132,7 @@ def validate_and_sign_up():
 tk.Button(signup_frame, text="Register", command=validate_and_sign_up, bg="#4A90E2", fg="white").grid(row=6, columnspan=2, pady=10)
 tk.Button(signup_frame, text="Back to Login", command=lambda: show_login_page(), bg="#999999", fg="white").grid(row=7, columnspan=2)
 
-# --- עמוד Login ---
+
 login_frame = tk.Frame(root, bg="#F0F4F8")
 tk.Label(login_frame, text="Login", font=("Arial", 16), bg="#F0F4F8").grid(row=0, columnspan=2, pady=10)
 
@@ -147,7 +147,7 @@ entry_password_login.grid(row=2, column=1)
 tk.Button(login_frame, text="Login", command=lambda: login(entry_username_login, entry_password_login, show_home_page), bg="#4A90E2", fg="white").grid(row=3, columnspan=2, pady=10)
 tk.Button(login_frame, text="Sign Up", command=lambda: show_signup_page(), bg="#999999", fg="white").grid(row=4, columnspan=2)
 
-# --- עמוד ראשי ---
+
 home_frame = tk.Frame(root, bg="#F0F4F8")
 tk.Button(home_frame, text="View Profiles", command=lambda: show_profiles(profile_text), bg="#4A90E2", fg="white").grid(row=0, column=0)
 tk.Button(home_frame, text="Manage Profiles", command=lambda: show_manage_profiles(), bg="#4A90E2", fg="white").grid(row=0, column=1)
@@ -156,7 +156,7 @@ tk.Button(home_frame, text="Logout", command=lambda: show_login_page(), bg="#4A9
 profile_text = tk.Text(home_frame, height=10, width=80)
 profile_text.grid(row=2, column=0, columnspan=3)
 
-# --- עמוד ניהול פרופילים ---
+
 manage_profiles_frame = tk.Frame(root, bg="#F0F4F8")
 
 def clear_manage_fields():
@@ -234,7 +234,7 @@ def validate_and_update_behavior():
 tk.Button(manage_profiles_frame, text="Update Behavior", command=validate_and_update_behavior, bg="#4A90E2", fg="white").grid(row=9, columnspan=2)
 tk.Button(manage_profiles_frame, text="Back to Home", command=lambda: show_home_page(), bg="#999999", fg="white").grid(row=10, columnspan=2)
 
-# --- עמוד ניהול משתמשים (חדש) ---
+
 manage_users_frame = tk.Frame(root, bg="#F0F4F8")
 
 def load_users():
